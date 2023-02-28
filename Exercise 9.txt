@@ -1,0 +1,31 @@
+public Interface InterfaceExample {
+Double percentageDiscountTobeApplied();
+}
+
+..................................................................
+
+public class PremiumCustomer implements InterfaceExample{
+    public Double percentageDiscountTobeApplied(){
+        return 0.30;
+    }
+
+}
+
+....................................................................
+
+public class normalCustomer implements InterfaceExample{
+    public Double percentageDiscountTobeApplied(){
+        return 0.10;
+            }
+}
+
+....................................................................
+
+PremiumCustomer obj1=new PremiumCustomer();
+Double discount=obj1.percentageDiscountTobeApplied();
+System.debug('Calling the interface method in PremiumCustomer to return 30% discount');
+System.debug('Discount in percentage: '+(discount*100)+'%');
+normalCustomer obj2=new normalCustomer();
+discount=obj2.percentageDiscountTobeApplied();
+System.debug('Calling the interface method in PremiumCustomer to return 30% discount ');
+System.debug('Discount in percentage: '+(discount*100)+'%');

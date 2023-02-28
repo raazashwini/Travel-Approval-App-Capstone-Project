@@ -1,0 +1,15 @@
+@isTest
+public class DisqualifyTestLeads {
+	@isTest static void a()
+    {
+        Lead le=new Lead();
+        le.FirstName = 'Role';
+        le.LastName = 'Test';
+        le.Company = 'Wipro';
+        
+       
+        Test.startTest();
+        insert le;
+        Test.stopTest();
+    }
+}

@@ -1,0 +1,13 @@
+public class billingloop {
+    public static void viewBills(){
+        List<Billing_c> listofBills= [SELECT Id, Name,Statusc FROM Billing_c];
+        List<string> billRecords= new list<string>();
+        for (Billing__c bill : listofBills){
+            System.debug('value of Current Record on which loop is iterating is: '+ listofBills);
+            if(bill.status__c == 'Paid'){
+                billRecords.add(bill.Name);
+            }
+        }
+        system.debug('Billing Records are:'+ billRecords);
+    }
+}

@@ -1,0 +1,25 @@
+Customer_c cr =new  Customer_c();
+        cr.Name='Wipro';
+        cr.Customer_Type__c='Premium';
+  
+       insert cr;
+        List<Billing_c> BillingList =new List<Billing_c>();
+        Billing_c Br =new Billing_c();
+           Br.Status__c = 'Paid';
+           Br.Amount_Paid__c = 5000000;
+           Br.Id = cr.CreatedById;
+        BillingList.add(Br);
+        Database.SaveResult[] srList = Database.insert(BillingList,false);
+        Integer i=0;
+          for (Database.SaveResult sr : srList) {
+                if (!sr.isSuccess()) {
+               for(Database.Error err : sr.getErrors()) {
+                   System.debug('Following Error Found ');
+                System.debug(err.getStatusCode() + ': ' + err.getMessage());
+                System.debug('Billing object field which are affected by the error: '+ err.getFields());
+            }
+        } 
+              System.debug('Succesfully insertrd Billing Record Billing Id : '+sr.getId());
+              
+        i++;
+    }

@@ -1,0 +1,3 @@
+Boolean isTrue = True;
+Boolean isFalse = false;
+System.debug('Answer:' +(isTrue || isFalse));

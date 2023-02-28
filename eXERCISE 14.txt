@@ -1,0 +1,15 @@
+trigger DisqualifyTestLeads on Lead (before insert) {
+    List<Lead> llist = new List<Lead>();
+    for(Lead le:Trigger.new)
+    {
+      if(le.FirstName.containsIgnoreCase('test')|| string.isBlank(le.FirstName) 
+         || le.LastName.containsIgnoreCase('test')||string.isBlank(le.LastName))
+        {
+            system.debug(le.FirstName + ' ' + le.LastName + 'Will be disqualified!');
+            llist.add(le);
+        }
+    }
+    for(Lead l :llist){
+        l.status='Disqualified';
+    }
+}

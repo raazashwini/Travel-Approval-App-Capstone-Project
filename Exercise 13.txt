@@ -1,0 +1,3 @@
+select Industry,Website,(Select id,Amount,StageName from Opportunities)
+
+from Account where Industry ='Energy' AND AnnualRevenue > 5000

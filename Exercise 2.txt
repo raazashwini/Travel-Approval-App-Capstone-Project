@@ -1,0 +1,55 @@
+String a='Adarsh';
+System.debug('String endswith:'+a.endsWith('h'));
+
+......................................................................
+
+String a='Adarsh';
+System.debug('String endswith:'+a.endsWith('h'));
+
+
+
+Date todaysDate=date.today();
+Date added30Days=date.today().addDays (30);
+System.debug('Todays date '+todaysDate);
+System.debug('Added 30 days '+added30Days);
+
+
+
+String st = '10';
+integer num = integer.valueOf(st);
+System.debug(num +20);
+
+
+
+String name = 'Adarsh';
+Integer len = name.length();
+System.debug(len);
+
+
+
+List<Integer> n =new List<Integer>();
+//add()
+n.add(8);
+n.add(3);
+n.add(4);
+n.add(1);
+System.debug(n);
+//get()
+Integer x = n.get(1);
+System.debug(x);
+//set()
+n.set(1,56);
+System.debug(n);   
+//clear()
+n.clear();
+System.debug(n);
+
+
+........................................................................
+
+Integer x = 20;
+while(x>12){
+    for(x = 0; x<10; x = x+1){
+        System.debug('Value of x is '+x);
+    }
+}

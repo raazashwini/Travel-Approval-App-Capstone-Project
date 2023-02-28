@@ -1,0 +1,17 @@
+public class DiscountClass {
+    
+    
+    Final Decimal regularDiscount=0.1;
+    Decimal finalPrice=0.0;
+    
+    public Decimal calculateDiscount (Integer price){
+        finalPrice=price-price*regularDiscount;
+        return finalPrice;
+    }
+}
+
+...........................................................................
+
+DiscountClass obj=new DiscountClass();
+Decimal finalPrice=obj.calculateDiscount (100);
+System.debug('finalPrice:'+finalPrice);

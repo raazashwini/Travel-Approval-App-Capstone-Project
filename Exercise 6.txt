@@ -1,0 +1,23 @@
+Integer score = 60;
+if(score==100) {
+    System.debug ('Grade: A+');
+}else if(score>=80){
+    System.debug ('Grade: A');
+}else if(score>=70){
+    System.debug ('Grade: B');
+}else{
+    System.debug('Grade: Failed');
+}
+
+............................................................
+
+Integer score = 90;
+if(score==100) {
+    System.debug ('Grade: A+');
+}else if(score>=90) {
+    System.debug ('Grade: A');
+}else if(score>=80) {
+    System.debug ('Grade: B');
+}else{
+    System.debug('Grade: Failed');
+}

@@ -1,0 +1,17 @@
+trigger CustomerTrigger on Customer__c (after insert, after update) {
+    List<Billing_c> BillingList = new List<Billing_c>();
+    
+    for (Customer__c objCustomer: Trigger.new)
+    {
+        
+        
+        if (objCustomer.Active__c == False)
+        {
+            Billing_c objbill = new Billing_c();
+            objbill.Status__c = 'Paid';
+            objbill.Amount_Paid__c=1000000;
+            BillingList.add(objbill);
+        }
+    }
+    insert Billinglist;
+}

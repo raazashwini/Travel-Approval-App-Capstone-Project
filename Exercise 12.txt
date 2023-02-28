@@ -1,0 +1,13 @@
+@isTest
+public class CustomerTriggerTestClass {
+    @isTest static void testName() {
+        Customer_c cust=new Customer_c();
+        cust.Active__c=False;
+        insert cust;
+
+        Test.startTest();
+        cust.Active__c=False;
+        update cust;
+        Test.stopTest();
+    }
+}

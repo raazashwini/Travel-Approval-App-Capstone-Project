@@ -1,0 +1,3 @@
+Integer myluckyNumber = 15;
+Integer myunluckyNumber = 7;
+System.debug('Answer:'+ (myluckyNumber != myunluckyNumber+8));
